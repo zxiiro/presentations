@@ -49,7 +49,78 @@
                         <li>What is a Merge?</li>
                         <li>What is a Merge Commit?</li>
                         <li>What is a Rebase?</li>
+                        <li>Eclipse - EGit</li>
                     </ul>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Merge</h2>
+                        <h4>AKA Fast Forward Merge (--ff)</h4>
+
+                        <canvas id="mergeCanvas" width="600" height="300"
+                            style="border:2px solid #000000; background:#444444">
+                        </canvas>
+
+                        <script>
+                            var c=document.getElementById("mergeCanvas");
+                            var ctx=c.getContext("2d");
+
+                            <!-- master branch -->
+                            ctx.strokeStyle="#FF0000";
+                            ctx.strokeRect(10,145,20,20);
+                            ctx.strokeRect(60,145,20,20);
+                            ctx.strokeRect(110,145,20,20);
+                            ctx.font="20px Arial";
+                            ctx.fillText("master",140,160);
+
+                            <!-- test branch -->
+                            ctx.strokeStyle="#00FF00";
+                            ctx.strokeRect(160,50,20,20);
+                            ctx.strokeRect(210,50,20,20);
+                            ctx.fillText("new_feature",240,65);
+                        </script>
+
+                        <pre class="fragment"><code data-trim>
+$ git merge [--ff] new_feature
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Result of a FF Merge</h2>
+
+                        <canvas id="mergeCanvas2" width="600" height="300"
+                            style="border:2px solid #000000;">
+                        </canvas>
+
+                        <script>
+                            var c=document.getElementById("mergeCanvas2");
+                            var ctx=c.getContext("2d");
+
+                            <!-- master branch -->
+                            ctx.strokeStyle="#FF0000";
+                            ctx.strokeRect(10,145,20,20);
+                            ctx.strokeRect(60,145,20,20);
+                            ctx.strokeRect(110,145,20,20);
+
+                            <!-- test branch -->
+                            ctx.strokeStyle="#00FF00";
+                            ctx.strokeRect(160,145,20,20);
+                            ctx.strokeRect(210,145,20,20);
+                            ctx.font="20px Arial";
+                            ctx.fillText("master",240,160);
+                        </script>
+
+                        <pre class="fragment"><code data-trim>
+$ git merge new_feature
+Updating f9a3873..67b833e
+Fast-forward
+ src/freeseer/framework/multimedia.py                |  5 ++++-
+ src/freeseer/frontend/record/RecordingController.py |  5 +++--
+ src/freeseer/frontend/record/RecordingWidget.py     | 12 ++++++++++++
+ src/freeseer/frontend/record/record.py              | 24 +++++++++++++++++++++++-
+ 4 files changed, 42 insertions(+), 4 deletions(-)
+                        </code></pre>
+                    </section>
                 </section>
 
             </div>
