@@ -56,7 +56,7 @@
                 <section>
                     <section>
                         <h2>Merge</h2>
-                        <h4>AKA Fast Forward Merge (--ff)</h4>
+                        <h4>AKA Fast Forward Merge (--ff-only)</h4>
 
                         <canvas id="mergeCanvas" width="600" height="300"
                             style="border:2px solid #000000; background:#444444">
@@ -82,7 +82,7 @@
                         </script>
 
                         <pre class="fragment"><code data-trim>
-$ git merge [--ff] new_feature
+$ git merge [--ff-only] new_feature
                         </code></pre>
                     </section>
                     <section>
@@ -121,6 +121,32 @@ Fast-forward
  4 files changed, 42 insertions(+), 4 deletions(-)
                         </code></pre>
                     </section>
+                </section>
+
+                <section>
+                    <h2>Merge Commit</h2>
+                    <h4>AKA Non-Fast Forward Merge (--no-ff)</h4>
+
+                    <pre class="fragment"><code data-trim>
+$ git merge [--no-ff] new_feature
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Rebase</h2>
+                    <h4>AKA Rewriting history</h4>
+
+                    <pre class="fragment"><code data-trim>
+$ git rebase origin/master
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>EGit - Merge</h2>
+                </section>
+
+                <section>
+                    <h2>EGit - Rebase</h2>
                 </section>
 
             </div>
