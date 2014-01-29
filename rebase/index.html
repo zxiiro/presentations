@@ -38,6 +38,7 @@
             <div class="slides">
                 <section>
                     <h1>WTF is Git Rebase</h1>
+                    <h3>Git's 3 merge types</h3>
                     <p>
                         <small>Created by <a href="http://github.com/zxiiro">Thanh Ha</a> / <a href="http://twitter.com/zxiiro">@zxiiro</a></small>
                     </p>
@@ -49,7 +50,6 @@
                         <li>What is a Merge?</li>
                         <li>What is a Merge Commit?</li>
                         <li>What is a Rebase?</li>
-                        <li>Eclipse - EGit</li>
                     </ul>
                 </section>
 
@@ -69,17 +69,6 @@ $ git merge [--ff-only] new_feature
                         <h2>Result of a FF Merge</h2>
 
                         <iframe src="git-merge-after.svg" style="border: outset; background-color:#FFFFFF"></iframe>
-
-                        <pre class="fragment"><code data-trim>
-$ git merge new_feature
-Updating f9a3873..67b833e
-Fast-forward
- src/freeseer/framework/multimedia.py                |  5 ++++-
- src/freeseer/frontend/record/RecordingController.py |  5 +++--
- src/freeseer/frontend/record/RecordingWidget.py     | 12 ++++++++++++
- src/freeseer/frontend/record/record.py              | 24 +++++++++++++++++++++++-
- 4 files changed, 42 insertions(+), 4 deletions(-)
-                        </code></pre>
                     </section>
                 </section>
 
@@ -148,14 +137,6 @@ Fast-forward
     $ git rebase origin/master
                         </code></pre>
                     </section>
-                </section>
-
-                <section>
-                    <h2>EGit - Merge</h2>
-                </section>
-
-                <section>
-                    <h2>EGit - Rebase</h2>
                 </section>
 
                 <section>
