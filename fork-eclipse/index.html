@@ -50,7 +50,6 @@
                         <li>Requirements</li>
                         <li>Where to get the code?</li>
                         <li>Building Eclipse SDK</li>
-                        <li>Building a single component of the SDK</li>
                         <li>SDK Repo Layout Overview</li>
                         <li>Updating your code repo</li>
                         <li>Contributing back to the Eclipse SDK</li>
@@ -61,6 +60,9 @@
                     </ul>
                 </section>
 
+                <!--
+                    Where to get the code?
+                -->
                 <section>
                     <section>
                         <h2>Where to get the code?</h2>
@@ -102,6 +104,27 @@
                         <h2>Gerrit Preview</h2>
                         <h4>https://git.eclipse.org/r/</h4>
                         <img src="gerrit-projects.png"/>
+                    </section>
+                </section>
+                <!--
+                    END: Where to get the code?
+                -->
+
+                <section>
+                    <section>
+                        <h2>Building Eclipse SDK</h2>
+
+                        <pre><code>
+mvn clean verify
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Building a single component</h2>
+
+                        <pre><code>
+mvn clean verify -Pbuild-individual-bundles
+                        </code></pre>
                     </section>
                 </section>
 
