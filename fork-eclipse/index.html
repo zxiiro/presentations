@@ -52,7 +52,7 @@
                         <li>Building Eclipse SDK</li>
                         <li>SDK Repo Layout Overview</li>
                         <li>Updating your code repo</li>
-                        <li>Contributing back to the Eclipse SDK</li>
+                        <li>Contributing to the Eclipse SDK</li>
                         <li>Creating an Eclipse.org account</li>
                         <li>Signing the CLA</li>
                         <li>Creating a patch</li>
@@ -137,6 +137,9 @@ mvn clean verify -Pbuild-individual-bundles
                     </section>
                 </section>
 
+                <!--
+                    Repository Layout
+                -->
                 <section>
                     <section>
                         <h2>Repository Layout Overview</h2>
@@ -165,6 +168,34 @@ mvn clean verify -Pbuild-individual-bundles
                     <section>
                         <h2>Platform</h2>
                     </section>
+                </section>
+                <!--
+                    END: Repository Layout
+                -->
+
+                <section>
+                    <h2>Updating your repositories</h2>
+
+                    <pre><code>
+# Cleanup first
+git clean -fdx
+git checkout -f
+git submodule foreach git clean -fdx
+git submodule foreach git checkout -f
+
+# Fetch new code
+git pull
+git submodule update
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Contributing to the Eclipse SDK</h2>
+                    <h4>Requirements</h4>
+
+                    <ul>
+                        <li>eclipse.org account</li>
+                    </ul>
                 </section>
 
                 <section>
