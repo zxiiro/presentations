@@ -249,19 +249,25 @@ git submodule update
                             <li>Click "Continue"</li>
                             <li>Click "Contributor License Agreement" tab</li>
                         </ol>
+
+                        <p><small>Note: CLA could take up to ~10 minutes to sync</small></p>
                     </section>
                 </section>
 
                 <section>
-                    <section>
-                        <h2>Submitting a Patch (1/2)</h2>
-                        <h4>Creating your patch</h4>
-                    </section>
+                    <h2>Submitting a Patch to Gerrit</h2>
+                    <ul>
+                        <li>_Always_ create a new branch for your work</li>
+                        <li>Only 1 commit per branch / patch</li>
+                        <li>Amend commit for changes to your patch</li>
+                        <li>Rebase before pushing</li>
+                    </ul>
 
-                    <section>
-                        <h2>Submitting a Patch (2/2)</h2>
-                        <h4>Pushing your patch to Gerrit</h4>
-                    </section>
+                    <pre class="fragment"><code>
+git fetch
+git rebase origin/master
+git push origin HEAD:refs/for/master
+                    </code></pre>
                 </section>
 
                 <section>
