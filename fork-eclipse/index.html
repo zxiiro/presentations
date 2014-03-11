@@ -120,6 +120,11 @@
 
                     <pre><code>
 git clone --recursive ssh://git.eclipse.org:29418/platform/eclipse.platform.releng.aggregator
+
+# If you forgot --recursive
+
+git submodule init
+git submodule update
                     </code></pre>
                 </section>
 
@@ -140,7 +145,6 @@ mvn clean verify -P build-individual-bundles
 
 # OR
 
-# Install built artifacts to Maven local repo
 mvn clean install -P build-individual-bundles
                         </code></pre>
                     </section>
@@ -293,6 +297,13 @@ git push origin HEAD:refs/for/master
                     </ul>
 
                     <p><img class="fragment" src="gerrit-pull-patch.png"/></p>
+                </section>
+
+                <section>
+                    <h2>Where to get help</h2>
+
+                    <p>cbi-dev mailing list</p>
+                    <small>https://dev.eclipse.org/mailman/listinfo/cbi-dev</small>
                 </section>
 
                 <section>
